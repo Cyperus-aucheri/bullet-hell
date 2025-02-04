@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=3 uid="uid://c610cmrcy76bx"]
+
+[ext_resource type="Script" path="res://Scripts/Buttons/startbtn.gd" id="1_wpipg"]
+[ext_resource type="Script" path="res://Scripts/Buttons/quitbtn.gd" id="2_i084i"]
+
+[node name="Menu" type="CanvasLayer"]
+
+[node name="Title" type="Label" parent="."]
+offset_left = 121.0
+offset_top = 76.0
+offset_right = 713.0
+offset_bottom = 145.0
+theme_override_font_sizes/font_size = 50
+text = "Bullet Hell"
+
+[node name="Start" type="Button" parent="."]
+offset_left = 722.0
+offset_top = 234.0
+offset_right = 1016.0
+offset_bottom = 277.0
+theme_override_font_sizes/font_size = 25
+text = "Start"
+script = ExtResource("1_wpipg")
+
+[node name="Quit" type="Button" parent="."]
+offset_left = 722.0
+offset_top = 311.0
+offset_right = 1016.0
+offset_bottom = 354.0
+theme_override_font_sizes/font_size = 25
+text = "Quit"
+script = ExtResource("2_i084i")
