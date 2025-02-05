@@ -1,14 +1,46 @@
-[gd_scene load_steps=2 format=3 uid="uid://dg88n17vgr1wf"]
+[gd_scene load_steps=6 format=3 uid="uid://dg88n17vgr1wf"]
 
 [ext_resource type="Texture2D" uid="uid://c0m8y0x1foimx" path="res://placeholders/game rectangle.png" id="1_r4pjl"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tqvp1"]
+size = Vector2(1279, 13)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vg24r"]
+size = Vector2(689, 707)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ibiqj"]
+size = Vector2(591, 12)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l8la0"]
+size = Vector2(11, 695)
+
 [node name="Gameui" type="Node2D"]
-
-[node name="GameRectangle" type="Sprite2D" parent="."]
-texture = ExtResource("1_r4pjl")
-centered = false
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="GameRectangle"]
 
 [node name="Camera2D" type="Camera2D" parent="."]
 anchor_mode = 0
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="GameRectangle" type="Sprite2D" parent="StaticBody2D"]
+texture = ExtResource("1_r4pjl")
+centered = false
+
+[node name="TopCol" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(639.5, 6.5)
+shape = SubResource("RectangleShape2D_tqvp1")
+one_way_collision_margin = 0.0
+
+[node name="RightCol" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(935.5, 366.5)
+shape = SubResource("RectangleShape2D_vg24r")
+one_way_collision_margin = 0.0
+
+[node name="BottomCol" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(295.5, 714)
+shape = SubResource("RectangleShape2D_ibiqj")
+one_way_collision_margin = 0.0
+
+[node name="LeftCol" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(5.5, 360.5)
+shape = SubResource("RectangleShape2D_l8la0")
+one_way_collision_margin = 0.0
