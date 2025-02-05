@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://dg88n17vgr1wf"]
+
+[ext_resource type="Texture2D" uid="uid://c0m8y0x1foimx" path="res://placeholders/game rectangle.png" id="1_r4pjl"]
+
+[node name="Gameui" type="Node2D"]
+
+[node name="GameRectangle" type="Sprite2D" parent="."]
+texture = ExtResource("1_r4pjl")
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GameRectangle"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
