@@ -1,7 +1,12 @@
-[gd_scene load_steps=3 format=3 uid="uid://c610cmrcy76bx"]
+[gd_scene load_steps=8 format=3 uid="uid://c610cmrcy76bx"]
 
+[ext_resource type="Texture2D" uid="uid://dsk86wenf4h" path="res://assets/EXITBUTTON.png" id="1_552k5"]
 [ext_resource type="Script" path="res://Scripts/Buttons/startbtn.gd" id="1_wpipg"]
 [ext_resource type="Script" path="res://Scripts/Buttons/quitbtn.gd" id="2_i084i"]
+[ext_resource type="Texture2D" uid="uid://tnmxjo7jnbxj" path="res://assets/extrasBUTTON.png" id="3_qguiy"]
+[ext_resource type="Texture2D" uid="uid://c4dmbx5psk14x" path="res://assets/GamestartBUTTON.png" id="4_3muc1"]
+[ext_resource type="Texture2D" uid="uid://ktoqesvopjr5" path="res://assets/LEVELSELECTBUTTON.png" id="6_rxjkl"]
+[ext_resource type="Texture2D" uid="uid://dq55yuuf8v75o" path="res://assets/settingsTBUTTON.png" id="7_ilhho"]
 
 [node name="Menu" type="CanvasLayer"]
 
@@ -13,20 +18,43 @@ offset_bottom = 145.0
 theme_override_font_sizes/font_size = 50
 text = "Bullet Hell"
 
-[node name="Start" type="Button" parent="."]
-offset_left = 722.0
-offset_top = 234.0
-offset_right = 1016.0
-offset_bottom = 277.0
-theme_override_font_sizes/font_size = 25
-text = "Start"
+[node name="Exitbutton" type="Sprite2D" parent="."]
+position = Vector2(1002.85, 651.35)
+scale = Vector2(0.177506, 0.179499)
+texture = ExtResource("1_552k5")
+
+[node name="Button2" type="Button" parent="Exitbutton"]
+modulate = Color(1, 1, 1, 0)
+offset_left = -793.505
+offset_top = -280.503
+offset_right = 830.495
+offset_bottom = 271.497
+script = ExtResource("2_i084i")
+
+[node name="ExtrasButton" type="Sprite2D" parent="."]
+position = Vector2(899, 424)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("3_qguiy")
+
+[node name="GamestartButton" type="Sprite2D" parent="."]
+position = Vector2(739, 211)
+scale = Vector2(0.15434, 0.15434)
+texture = ExtResource("4_3muc1")
+
+[node name="Button" type="Button" parent="GamestartButton"]
+modulate = Color(1, 1, 1, 0)
+offset_left = -1017.0
+offset_top = -311.0
+offset_right = 985.0
+offset_bottom = 369.0
 script = ExtResource("1_wpipg")
 
-[node name="Quit" type="Button" parent="."]
-offset_left = 722.0
-offset_top = 311.0
-offset_right = 1016.0
-offset_bottom = 354.0
-theme_override_font_sizes/font_size = 25
-text = "Quit"
-script = ExtResource("2_i084i")
+[node name="Levelselectbutton" type="Sprite2D" parent="."]
+position = Vector2(822, 327)
+scale = Vector2(0.157269, 0.157269)
+texture = ExtResource("6_rxjkl")
+
+[node name="SettingsTbutton" type="Sprite2D" parent="."]
+position = Vector2(958, 535)
+scale = Vector2(0.166337, 0.166337)
+texture = ExtResource("7_ilhho")
