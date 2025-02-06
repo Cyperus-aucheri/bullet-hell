@@ -1,12 +1,13 @@
 [gd_scene load_steps=3 format=3 uid="uid://bf1d1veg75kvk"]
 
 [ext_resource type="PackedScene" uid="uid://dg88n17vgr1wf" path="res://templates/gameui.tscn" id="1_5ibug"]
-[ext_resource type="PackedScene" uid="uid://dv7ola2piqvi2" path="res://placeholders/chartest.tscn" id="1_wsii6"]
+[ext_resource type="PackedScene" uid="uid://cqin2kct4syio" path="res://character/witchgirl/witchgirl.tscn" id="2_mq200"]
 
 [node name="Tstborder" type="Node2D"]
 
 [node name="Gameui" parent="." instance=ExtResource("1_5ibug")]
-position = Vector2(-2, 4)
+position = Vector2(4, 4)
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("1_wsii6")]
-position = Vector2(300, 315)
+[node name="CharacterBody2D" parent="." instance=ExtResource("2_mq200")]
+position = Vector2(260, 620)
+scale = Vector2(2, 2)

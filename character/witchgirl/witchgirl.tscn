@@ -1,0 +1,64 @@
+[gd_scene load_steps=8 format=3 uid="uid://cqin2kct4syio"]
+
+[ext_resource type="Texture2D" uid="uid://csxncbm0srq0e" path="res://character/witchgirl/B_witch_charge.png" id="1_5s3go"]
+[ext_resource type="Script" path="res://character/witchgirl/witchgirl.gd" id="1_lgrxe"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sjnyc"]
+atlas = ExtResource("1_5s3go")
+region = Rect2(0, 96, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yjb0p"]
+atlas = ExtResource("1_5s3go")
+region = Rect2(0, 144, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7xw0h"]
+atlas = ExtResource("1_5s3go")
+region = Rect2(0, 48, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_a8732"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sjnyc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yjb0p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7xw0h")
+}],
+"loop": true,
+"name": &"default",
+"speed": 9.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qpbmh"]
+size = Vector2(7, 7)
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+position = Vector2(-3, 0)
+script = ExtResource("1_lgrxe")
+
+[node name="Sprite" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -6)
+sprite_frames = SubResource("SpriteFrames_a8732")
+autoplay = "default"
+frame_progress = 0.903248
+
+[node name="Collision" type="CollisionShape2D" parent="."]
+top_level = true
+light_mask = 0
+position = Vector2(-3.5, 2.5)
+shape = SubResource("RectangleShape2D_qpbmh")
+
+[node name="Hitbox" type="ColorRect" parent="."]
+offset_left = -4.0
+offset_top = -1.0
+offset_right = 3.0
+offset_bottom = 6.0
+color = Color(0.309804, 0.643137, 0.647059, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(73, 73)
+zoom = Vector2(2, 2)
