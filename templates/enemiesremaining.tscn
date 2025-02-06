@@ -1,0 +1,38 @@
+[gd_scene load_steps=2 format=3 uid="uid://eegbxd3ae7vo"]
+
+[ext_resource type="Script" path="res://Scripts/enemiesRemaining.gd" id="1_nk6y6"]
+
+[node name="Enemiesremaining" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Holder" type="ColorRect" parent="CanvasLayer"]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -510.0
+offset_top = -156.0
+offset_right = -99.0
+offset_bottom = -92.0
+grow_horizontal = 0
+grow_vertical = 0
+color = Color(0, 0, 0, 1)
+script = ExtResource("1_nk6y6")
+
+[node name="Red" type="ColorRect" parent="CanvasLayer/Holder"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 407.0
+offset_bottom = 60.0
+color = Color(1, 0, 0, 1)
+
+[node name="Green" type="ColorRect" parent="CanvasLayer/Holder"]
+layout_mode = 0
+offset_left = 582.0
+offset_top = 25.0
+offset_right = 980.0
+offset_bottom = 73.0
+color = Color(0, 1, 0, 1)

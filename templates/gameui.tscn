@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://dg88n17vgr1wf"]
+[gd_scene load_steps=7 format=3 uid="uid://dg88n17vgr1wf"]
 
 [ext_resource type="Texture2D" uid="uid://c0m8y0x1foimx" path="res://placeholders/game rectangle.png" id="1_r4pjl"]
+[ext_resource type="PackedScene" uid="uid://eegbxd3ae7vo" path="res://templates/enemiesremaining.tscn" id="2_uvru3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tqvp1"]
 size = Vector2(1279, 13)
@@ -44,3 +45,6 @@ one_way_collision_margin = 0.0
 position = Vector2(5.5, 360.5)
 shape = SubResource("RectangleShape2D_l8la0")
 one_way_collision_margin = 0.0
+
+[node name="Enemiesremaining" parent="." instance=ExtResource("2_uvru3")]
+position = Vector2(763, 565)
