@@ -13,7 +13,6 @@ func _ready():
 
 func _physics_process(_delta):
 	input_direction = get_input_direction()
-	print("Input Direction:", input_direction)  # Debug
 
 	var current_speed = SPEED
 	if Input.is_action_pressed("ui_focus"):

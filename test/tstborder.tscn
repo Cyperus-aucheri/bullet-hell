@@ -10,4 +10,3 @@ position = Vector2(4, 4)
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("2_mq200")]
 position = Vector2(260, 620)
-scale = Vector2(2, 2)
