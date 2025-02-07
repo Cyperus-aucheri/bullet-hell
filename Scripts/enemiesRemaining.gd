@@ -1,11 +1,13 @@
 extends ColorRect
 
-@export var remaining = 50
 @export var total = 100
+
+var remaining: float = 100:
+	set(value):
+		remaining = clamp(value, 0, total)
+		$Green.scale = Vector2(remaining / float(total), 1)
 
 func _ready() -> void:
 	$Green.position = $Red.position
 	$Green.size = $Red.size
-
-func _process(_delta: float) -> void:
-	$Green.scale = Vector2(float(remaining) / float(total), 1)
+	$Green.scale = Vector2(remaining / float(total), 1)
