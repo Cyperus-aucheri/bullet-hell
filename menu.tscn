@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://c610cmrcy76bx"]
+[gd_scene load_steps=9 format=3 uid="uid://c610cmrcy76bx"]
 
 [ext_resource type="Texture2D" uid="uid://dsk86wenf4h" path="res://assets/EXITBUTTON.png" id="1_552k5"]
 [ext_resource type="Script" path="res://Scripts/Buttons/startbtn.gd" id="1_wpipg"]
 [ext_resource type="Script" path="res://Scripts/Buttons/quitbtn.gd" id="2_i084i"]
 [ext_resource type="Texture2D" uid="uid://tnmxjo7jnbxj" path="res://assets/extrasBUTTON.png" id="3_qguiy"]
 [ext_resource type="Texture2D" uid="uid://c4dmbx5psk14x" path="res://assets/GamestartBUTTON.png" id="4_3muc1"]
+[ext_resource type="Script" path="res://Scripts/Buttons/extrasbtn.gd" id="4_tdxsh"]
 [ext_resource type="Texture2D" uid="uid://ktoqesvopjr5" path="res://assets/LEVELSELECTBUTTON.png" id="6_rxjkl"]
 [ext_resource type="Texture2D" uid="uid://dq55yuuf8v75o" path="res://assets/settingsTBUTTON.png" id="7_ilhho"]
 
@@ -35,6 +36,13 @@ script = ExtResource("2_i084i")
 position = Vector2(899, 424)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("3_qguiy")
+
+[node name="Button" type="Button" parent="ExtrasButton"]
+offset_left = -650.0
+offset_top = -250.0
+offset_right = 705.0
+offset_bottom = 230.0
+script = ExtResource("4_tdxsh")
 
 [node name="GamestartButton" type="Sprite2D" parent="."]
 position = Vector2(739, 211)
