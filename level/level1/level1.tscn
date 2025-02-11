@@ -1,3 +1,11 @@
-[gd_scene format=3 uid="uid://bvaee7l1xkejw"]
+[gd_scene load_steps=3 format=3 uid="uid://bvaee7l1xkejw"]
+
+[ext_resource type="PackedScene" uid="uid://c7hb5vxm6g78c" path="res://level/level1/gameuilvl1.tscn" id="1_r84ig"]
+[ext_resource type="PackedScene" uid="uid://cqin2kct4syio" path="res://character/witchgirl/witchgirl.tscn" id="2_e5caq"]
 
 [node name="Level1" type="Node2D"]
+
+[node name="Gameui" parent="." instance=ExtResource("1_r84ig")]
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("2_e5caq")]
+position = Vector2(270, 636)
