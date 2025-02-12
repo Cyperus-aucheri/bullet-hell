@@ -33,11 +33,13 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qpbmh"]
-size = Vector2(7, 7)
+size = Vector2(14, 14)
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 position = Vector2(-3, 0)
 scale = Vector2(2, 2)
+disable_mode = 2
+collision_mask = 2
 script = ExtResource("1_lgrxe")
 
 [node name="Sprite" type="AnimatedSprite2D" parent="."]
@@ -46,10 +48,11 @@ sprite_frames = SubResource("SpriteFrames_a8732")
 autoplay = "default"
 frame_progress = 0.475391
 
-[node name="Collision" type="CollisionShape2D" parent="."]
+[node name="WitchCollision" type="CollisionShape2D" parent="."]
 top_level = true
 light_mask = 0
-position = Vector2(-3.5, 2.5)
+z_index = 3
+position = Vector2(-4, 5)
 shape = SubResource("RectangleShape2D_qpbmh")
 
 [node name="Hitbox" type="ColorRect" parent="."]
