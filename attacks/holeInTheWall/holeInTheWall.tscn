@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://dq0cjg75q7w3j"]
+
+[ext_resource type="Script" path="res://attacks/holeInTheWall/spawner.gd" id="1_166vb"]
+
+[node name="HoleInTheWall" type="Node2D"]
+
+[node name="Spawner" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_166vb")

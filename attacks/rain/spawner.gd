@@ -2,9 +2,10 @@ extends Control
 
 var currentAngle: float = 0
 var screenSize: Vector2
-var spawnPos: Vector2 = Vector2(100, 100)
 
-func SpawnBullet():
+var screen_width
+
+func SpawnBullet(spawnPos: Vector2):
 	var scene = load("res://bullets/baseBullet.tscn")
 	var instance = scene.instantiate()
 	add_child(instance)
@@ -27,6 +28,4 @@ func _ready() -> void:
 	screenSize = get_viewport_rect().size
 	
 	for i in range(50):
-		SpawnBullet()
-		SpawnBullet()
-		await SpawnBullet()
+		await SpawnBullet(Vector2(100, 100))
