@@ -1,0 +1,7 @@
+Liam must:
+-Create enemies to spawn the bullets
+-create collisions for the bullets
+-make the enemy counter work
+-create the bullets for the character
+
+before he merges!
