@@ -4,9 +4,10 @@ var SPEED = 300
 var SLOW_SPEED = 100
 
 var input_direction = Vector2.ZERO  
-
+var can_shoot = true
 @onready var sprite = $Sprite
 @onready var hitbox = $Hitbox  
+@export var shoot_cooldown = 0.5
 
 func _ready():
 	hitbox.visible = false  
@@ -40,3 +41,15 @@ func get_input_direction():
 		return direction.normalized()
 	
 	return Vector2.ZERO
+
+func shoot_bullets():
+	if Input.is_action_just_pressed("shoot") and can_shoot:
+		shoot()
+		can_shoot = false
+		await get_tree().create_timer(shoot_cooldown).timeout
+		can_shoot = true
+		
+func shoot():
+	var bullet = bullet_scene.instantiate()
+	bullet.position = $Position2D.global_position  # Spawns at the Position2D node
+	get_tree().root.add_child(bullet)
