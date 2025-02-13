@@ -1,10 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://c610cmrcy76bx"]
+[gd_scene load_steps=7 format=3 uid="uid://c610cmrcy76bx"]
 
 [ext_resource type="Texture2D" uid="uid://dsk86wenf4h" path="res://assets/EXITBUTTON.png" id="1_552k5"]
 [ext_resource type="Texture2D" uid="uid://tnmxjo7jnbxj" path="res://assets/extrasBUTTON.png" id="3_qguiy"]
 [ext_resource type="Texture2D" uid="uid://c4dmbx5psk14x" path="res://assets/GamestartBUTTON.png" id="4_3muc1"]
 [ext_resource type="Script" path="res://Scripts/Buttons/extrasbtn.gd" id="4_tdxsh"]
-[ext_resource type="Script" path="res://startbutton.gd" id="5_pfb4g"]
 [ext_resource type="Texture2D" uid="uid://ktoqesvopjr5" path="res://assets/LEVELSELECTBUTTON.png" id="6_rxjkl"]
 [ext_resource type="Texture2D" uid="uid://dq55yuuf8v75o" path="res://assets/settingsTBUTTON.png" id="7_ilhho"]
 
@@ -55,7 +54,6 @@ offset_left = -1017.0
 offset_top = -311.0
 offset_right = 985.0
 offset_bottom = 369.0
-script = ExtResource("5_pfb4g")
 
 [node name="Levelselectbutton" type="Sprite2D" parent="."]
 position = Vector2(822, 327)

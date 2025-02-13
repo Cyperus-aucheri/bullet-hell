@@ -15,10 +15,8 @@ var currentBullet = "Blue"
 var bulletSprite = "://res/placeholders/Sprites/Lasers/" + BulletCols[currentBullet] or baseBullet + ".png"
 
 # Get screen size
-var screen_size: Vector2
-
-func _ready() -> void:
-	screen_size = get_viewport_rect().size  # Get the viewport size
+var screen_width: int
+var screen_left: int
 
 func ColorBullet(col: String):
 	currentBullet = col
@@ -30,5 +28,5 @@ func _process(delta: float) -> void:
 	position += velocity.normalized() * 200 * delta  # Move bullet
 
 	# Remove if bullet is out of bounds
-	if position.x < 0 or position.x > screen_size.x or position.y < 0 or position.y > screen_size.y:
+	if global_position.x < screen_left or global_position.x > screen_left + screen_width:
 		queue_free()  # Remove the bullet from the scene
