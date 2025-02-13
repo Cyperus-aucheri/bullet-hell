@@ -8,4 +8,4 @@
 [node name="Gameui" parent="." instance=ExtResource("1_r84ig")]
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("2_e5caq")]
-position = Vector2(270, 636)
+position = Vector2(270, 637)
