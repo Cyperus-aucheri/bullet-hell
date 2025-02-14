@@ -6,6 +6,8 @@ var attacks = {
 	"spiral": load("res://attacks/spiral/spiralAttack.tscn")
 }
 
+const attacksNames = ["holeInWall", "rain", "spiral"]
+
 func spawnAttack(atkName: String):
 	var atk = attacks[atkName]
 	
@@ -25,9 +27,5 @@ func spawnAttack(atkName: String):
 	await spawner.start(position + get_size() / 2)
 	
 func _ready():
-	spawnAttack("spiral")
-	spawnAttack("rain")
-	
-	await spawnAttack("holeInWall")
-	await spawnAttack("holeInWall")
-	await spawnAttack("holeInWall")
+	while true:
+		await spawnAttack(attacksNames.pick_random())
