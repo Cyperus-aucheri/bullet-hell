@@ -13,7 +13,7 @@ offset_top = 76.0
 offset_right = 713.0
 offset_bottom = 145.0
 theme_override_font_sizes/font_size = 50
-text = "Bullet Hell"
+text = "Aucheri"
 
 [node name="Exitbutton" type="Sprite2D" parent="."]
 position = Vector2(1075, 655)
@@ -42,7 +42,8 @@ texture = ExtResource("4_3muc1")
 [node name="Button" type="Button" parent="GamestartButton"]
 modulate = Color(1, 1, 1, 0)
 anchors_preset = -1
-anchor_left = 0.026455
+anchor_left = -0.0322751
+anchor_top = -0.0134086
 anchor_right = -0.0322751
 anchor_bottom = -0.0134086
 offset_left = -1017.0
