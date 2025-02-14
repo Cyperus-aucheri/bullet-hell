@@ -12,6 +12,8 @@ var enemies = [
 	preload("res://enemies/sprites/RedEnemySprite1.png")
 ]
 
+var attackNames = ["holeInWall", "rain", "spiral"]
+
 func spawnAttack(atkName: String):
 	var atk = attacks[atkName]
 	
@@ -33,9 +35,6 @@ func spawnAttack(atkName: String):
 func _ready():
 	texture = enemies.pick_random()
 	
-	spawnAttack("spiral")
-	spawnAttack("rain")
-	
-	await spawnAttack("holeInWall")
-	await spawnAttack("holeInWall")
-	await spawnAttack("holeInWall")
+	while true:
+		await spawnAttack(attacksNames.pick_random())
+

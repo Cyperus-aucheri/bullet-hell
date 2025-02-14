@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://cxus782cn5hay"]
+[gd_scene load_steps=4 format=3 uid="uid://c74siduvdkdkt"]
 
 [ext_resource type="Script" path="res://character/witchgirl/witchbullet.gd" id="1_mtoa8"]
 [ext_resource type="Texture2D" uid="uid://b6mrkjkdgtbho" path="res://placeholders/Sprites/Lasers/34.png" id="2_pdety"]
