@@ -36,5 +36,4 @@ func _ready():
 	texture = enemies.pick_random()
 	
 	while true:
-		await spawnAttack(attacksNames.pick_random())
-
+		await spawnAttack(attackNames.pick_random())

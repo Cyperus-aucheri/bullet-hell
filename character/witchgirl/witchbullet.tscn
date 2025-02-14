@@ -9,6 +9,7 @@ size = Vector2(87, 32)
 [node name="Area2D" type="Area2D"]
 rotation = -1.57079
 scale = Vector2(0.5, 0.5)
+collision_layer = 2
 script = ExtResource("1_mtoa8")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
