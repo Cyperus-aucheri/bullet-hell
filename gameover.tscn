@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://c2oxfgdj4ho6p"]
+
+[node name="Gameover" type="Node2D"]
+
+[node name="lbl" type="Label" parent="."]
+offset_left = 462.0
+offset_top = 165.0
+offset_right = 1054.0
+offset_bottom = 234.0
+theme_override_font_sizes/font_size = 50
+text = "Game Over"
+
+[node name="lbl2" type="Label" parent="."]
+offset_left = 411.0
+offset_top = 388.0
+offset_right = 875.0
+offset_bottom = 477.0
+theme_override_font_sizes/font_size = 50
+text = "Back to Main Menu
+"
+
+[node name="Button" type="Button" parent="lbl2"]
+modulate = Color(1, 1, 1, 0)
+offset_left = -16.0
+offset_top = 4.0
+offset_right = 476.0
+offset_bottom = 73.0
