@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://c2oxfgdj4ho6p"]
+[gd_scene load_steps=2 format=3 uid="uid://bx7lm6qae5d27"]
+
+[ext_resource type="Script" path="res://respawnbutton.gd" id="1_yn0jf"]
 
 [node name="Gameover" type="Node2D"]
 
@@ -26,3 +28,4 @@ offset_left = -16.0
 offset_top = 4.0
 offset_right = 476.0
 offset_bottom = 73.0
+script = ExtResource("1_yn0jf")

@@ -27,3 +27,6 @@ func update_hearts():
 		heart.custom_minimum_size  = Vector2(32, 32) # Adjust size if needed
 		heart.position = Vector2(i * 48, 0) # Adjust spacing if needed
 		add_child(heart)
+	
+	if health <= 0:
+		get_tree().change_scene_to_file("res://gameover.tscn")

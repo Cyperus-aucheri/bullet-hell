@@ -6,12 +6,6 @@ var attacks = {
 	"spiral": load("res://attacks/spiral/spiralAttack.tscn")
 }
 
-var enemies = [
-	preload("res://enemies/sprites/BlueEnemySprite1.png"),
-	preload("res://enemies/sprites/PurpleEnemySprite1.png"),
-	preload("res://enemies/sprites/RedEnemySprite1.png")
-]
-
 var attackNames = ["holeInWall", "rain", "spiral"]
 
 var rng = RandomNumberGenerator.new()
@@ -41,6 +35,8 @@ func spawnAttack(atkName: String):
 	
 	var instance = atk.instantiate()
 	
+	
+	
 	add_child(instance)
 	
 	var spawner = instance.get_node("Spawner")
@@ -51,12 +47,10 @@ func spawnAttack(atkName: String):
 	await spawner.start(Vector2(0, 0))
 	
 func start():
-	texture = enemies.pick_random()
-	
 	screen_left = get_node("../../../Gameui/StaticBody2D/GameRectangle").global_position.x
 	screen_width = get_node("../../../Gameui/StaticBody2D/GameRectangle").texture.get_size().x
 	
-	position = Vector2(rng.randi_range(screen_left + 25, screen_left + screen_width - 25), -100)
+	position = Vector2((screen_left + screen_width) / 2, -100)
 	
 	var tween = get_tree().create_tween()
 	await tween.tween_property(self, "position", position + Vector2(0, rng.randi_range(150, 300)), 0.5)
