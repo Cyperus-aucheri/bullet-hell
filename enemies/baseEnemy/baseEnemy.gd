@@ -6,8 +6,6 @@ var attacks = {
 	"spiral": load("res://attacks/spiral/spiralAttack.tscn")
 }
 
-const attacksNames = ["holeInWall", "rain", "spiral"]
-
 func spawnAttack(atkName: String):
 	var atk = attacks[atkName]
 	

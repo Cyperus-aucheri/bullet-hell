@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://csv0rwevese7u"]
+
+[ext_resource type="PackedScene" uid="uid://b2jret8y3olot" path="res://level/level2/gameuilvl2.tscn" id="1_3q1ms"]
+[ext_resource type="AudioStream" uid="uid://mhu70y3bmatd" path="res://level/level2/lvl2music.mp3" id="2_euusw"]
+
+[node name="Lvl2" type="Node2D"]
+
+[node name="Gameui" parent="." instance=ExtResource("1_3q1ms")]
+
+[node name="Lvl2Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_euusw")
+autoplay = true
+parameters/looping = true
