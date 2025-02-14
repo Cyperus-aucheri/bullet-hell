@@ -11,3 +11,8 @@ func _ready() -> void:
 	$Green.position = $Red.position
 	$Green.size = $Red.size
 	$Green.scale = Vector2(remaining / float(total), 1)
+	Global.boss_health_changed.connect(_on_set_boss_health)
+
+func _on_set_boss_health(value: int, max: int):
+	total = max
+	remaining = clamp(value, 0, max)
