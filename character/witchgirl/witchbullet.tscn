@@ -1,19 +1,22 @@
-[gd_scene load_steps=4 format=3 uid="uid://c74siduvdkdkt"]
+[gd_scene load_steps=4 format=3 uid="uid://cxus782cn5hay"]
 
 [ext_resource type="Script" path="res://character/witchgirl/witchbullet.gd" id="1_mtoa8"]
 [ext_resource type="Texture2D" uid="uid://b6mrkjkdgtbho" path="res://placeholders/Sprites/Lasers/34.png" id="2_pdety"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_khhnu"]
-size = Vector2(87, 32)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5ybw6"]
+size = Vector2(200, 51)
 
-[node name="Area2D" type="Area2D"]
-rotation = -1.57079
+[node name="Sprite2D" type="Sprite2D"]
+rotation = -1.5708
 scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_pdety")
 script = ExtResource("1_mtoa8")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_pdety")
+[node name="WitchBullet" type="Area2D" parent="."]
+disable_mode = 2
+collision_layer = 24
+collision_mask = 24
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-4, -1.99999)
-shape = SubResource("RectangleShape2D_khhnu")
+[node name="WitchBulletCol" type="CollisionShape2D" parent="WitchBullet"]
+position = Vector2(-17, -0.5)
+shape = SubResource("RectangleShape2D_5ybw6")
