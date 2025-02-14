@@ -31,7 +31,7 @@ collision_mask = 3
 
 [node name="GameRectangle" type="Sprite2D" parent="StaticBody2D"]
 position = Vector2(10, 14)
-scale = Vector2(1, 0.991429)
+scale = Vector2(1.138, 0.991429)
 texture = ExtResource("1_2pg7g")
 centered = false
 

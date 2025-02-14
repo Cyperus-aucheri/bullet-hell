@@ -64,7 +64,6 @@ func start():
 	while true:
 		await spawnAttack(attackNames.pick_random())
 
-
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	print("Hit by:", area.name)  # Debug
 	if area.name == "WitchBullet":

@@ -1,8 +1,8 @@
 [gd_scene load_steps=8 format=3 uid="uid://b2jret8y3olot"]
 
-[ext_resource type="Texture2D" uid="uid://bjr1oobkv7oug" path="res://level/level2/lvl2.jpeg" id="1_gj1gk"]
+[ext_resource type="Texture2D" uid="uid://btan5uu3ly26c" path="res://level/level2/nightsky.png" id="1_gaeyk"]
 [ext_resource type="PackedScene" uid="uid://eegbxd3ae7vo" path="res://templates/enemiesremaining.tscn" id="2_o3ni0"]
-[ext_resource type="Script" path="res://level/level1/scoreLabel.gd" id="3_p5ya7"]
+[ext_resource type="Script" path="res://level/level1/hearts.gd" id="3_v8bhw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tqvp1"]
 size = Vector2(1279, 70)
@@ -25,8 +25,8 @@ anchor_mode = 0
 
 [node name="GameRectangle" type="Sprite2D" parent="StaticBody2D"]
 position = Vector2(10, 14)
-scale = Vector2(1, 0.991429)
-texture = ExtResource("1_gj1gk")
+scale = Vector2(1.154, 0.991429)
+texture = ExtResource("1_gaeyk")
 centered = false
 
 [node name="TopCol" type="CollisionShape2D" parent="StaticBody2D"]
@@ -52,10 +52,6 @@ one_way_collision_margin = 0.0
 [node name="Enemiesremaining" parent="." instance=ExtResource("2_o3ni0")]
 position = Vector2(763, 565)
 
-[node name="Label" type="Label" parent="."]
-offset_left = 673.0
-offset_top = 161.0
-offset_right = 891.0
-offset_bottom = 305.0
-text = "Health: 5"
-script = ExtResource("3_p5ya7")
+[node name="Hearts" type="Node2D" parent="."]
+position = Vector2(672, 152)
+script = ExtResource("3_v8bhw")

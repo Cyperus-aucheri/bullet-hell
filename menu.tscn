@@ -1,19 +1,21 @@
-[gd_scene load_steps=5 format=3 uid="uid://c610cmrcy76bx"]
+[gd_scene load_steps=7 format=3 uid="uid://c610cmrcy76bx"]
 
 [ext_resource type="Texture2D" uid="uid://dsk86wenf4h" path="res://assets/EXITBUTTON.png" id="1_552k5"]
+[ext_resource type="Texture2D" uid="uid://c1qxfjb0eeovn" path="res://AucheriLogo.png" id="1_xakyi"]
 [ext_resource type="Script" path="res://exitbtn.gd" id="2_i5gux"]
 [ext_resource type="Texture2D" uid="uid://c4dmbx5psk14x" path="res://assets/GamestartBUTTON.png" id="4_3muc1"]
 [ext_resource type="Script" path="res://startbutton.gd" id="5_hliej"]
 
+[sub_resource type="SystemFont" id="SystemFont_5j4f6"]
+font_names = PackedStringArray("Comic Sans MS")
+font_weight = 350
+
 [node name="Menu" type="CanvasLayer"]
 
-[node name="Title" type="Label" parent="."]
-offset_left = 121.0
-offset_top = 76.0
-offset_right = 713.0
-offset_bottom = 145.0
-theme_override_font_sizes/font_size = 50
-text = "Aucheri"
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(152, 168)
+scale = Vector2(2.54, 2.54)
+texture = ExtResource("1_xakyi")
 
 [node name="Exitbutton" type="Sprite2D" parent="."]
 position = Vector2(1075, 655)
@@ -52,3 +54,15 @@ offset_right = 985.0
 offset_bottom = 369.0
 script = ExtResource("5_hliej")
 metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="."]
+offset_left = 11.0
+offset_top = 368.0
+offset_right = 955.0
+offset_bottom = 813.0
+theme_override_fonts/font = SubResource("SystemFont_5j4f6")
+theme_override_font_sizes/font_size = 30
+text = "Shift/A/LT to Focus
+WASD/DPAD/STEERING WHEEL to Move
+Z/B/RT to Shoot
+"
