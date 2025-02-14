@@ -1,0 +1,61 @@
+[gd_scene load_steps=8 format=3 uid="uid://b2jret8y3olot"]
+
+[ext_resource type="Texture2D" uid="uid://bjr1oobkv7oug" path="res://level/level2/lvl2.jpeg" id="1_gj1gk"]
+[ext_resource type="PackedScene" uid="uid://eegbxd3ae7vo" path="res://templates/enemiesremaining.tscn" id="2_o3ni0"]
+[ext_resource type="Script" path="res://level/level1/scoreLabel.gd" id="3_p5ya7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tqvp1"]
+size = Vector2(1279, 70)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vg24r"]
+size = Vector2(725, 707)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ibiqj"]
+size = Vector2(591, 30)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l8la0"]
+size = Vector2(38, 695)
+
+[node name="Gameui" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="GameRectangle" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(10, 14)
+scale = Vector2(1, 0.991429)
+texture = ExtResource("1_gj1gk")
+centered = false
+
+[node name="TopCol" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(639.5, 35)
+shape = SubResource("RectangleShape2D_tqvp1")
+one_way_collision_margin = 0.0
+
+[node name="RightCol" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(917.5, 366.5)
+shape = SubResource("RectangleShape2D_vg24r")
+one_way_collision_margin = 0.0
+
+[node name="BottomCol" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(295.5, 705)
+shape = SubResource("RectangleShape2D_ibiqj")
+one_way_collision_margin = 0.0
+
+[node name="LeftCol" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(19, 360.5)
+shape = SubResource("RectangleShape2D_l8la0")
+one_way_collision_margin = 0.0
+
+[node name="Enemiesremaining" parent="." instance=ExtResource("2_o3ni0")]
+position = Vector2(763, 565)
+
+[node name="Label" type="Label" parent="."]
+offset_left = 673.0
+offset_top = 161.0
+offset_right = 891.0
+offset_bottom = 305.0
+text = "Health: 5"
+script = ExtResource("3_p5ya7")

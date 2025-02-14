@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://bvaee7l1xkejw"]
+[gd_scene load_steps=4 format=3 uid="uid://bvaee7l1xkejw"]
 
 [ext_resource type="PackedScene" uid="uid://c7hb5vxm6g78c" path="res://level/level1/gameuilvl1.tscn" id="1_r84ig"]
 [ext_resource type="PackedScene" uid="uid://cqin2kct4syio" path="res://character/witchgirl/witchgirl.tscn" id="2_e5caq"]
+[ext_resource type="AudioStream" uid="uid://cmqx88jhtilho" path="res://level/level1/lvl1music.mp3" id="3_1k4f4"]
 
 [node name="Level1" type="Node2D"]
 
@@ -9,3 +10,8 @@
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("2_e5caq")]
 position = Vector2(270, 636)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_1k4f4")
+autoplay = true
+parameters/looping = true

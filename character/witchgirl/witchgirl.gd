@@ -55,7 +55,6 @@ func get_input_direction():
 
 func _shoot_bullets(_delta):
 	if Input.is_action_pressed("shoot") and can_shoot:
-		print("Shoot button pressed and can shoot")
 		shoot()
 		can_shoot = false
 		await get_tree().create_timer(shoot_cooldown).timeout
