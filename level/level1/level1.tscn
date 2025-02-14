@@ -1,15 +1,23 @@
-[gd_scene load_steps=4 format=3 uid="uid://bvaee7l1xkejw"]
+[gd_scene load_steps=5 format=3 uid="uid://bvaee7l1xkejw"]
 
 [ext_resource type="PackedScene" uid="uid://c7hb5vxm6g78c" path="res://level/level1/gameuilvl1.tscn" id="1_r84ig"]
 [ext_resource type="PackedScene" uid="uid://cqin2kct4syio" path="res://character/witchgirl/witchgirl.tscn" id="2_e5caq"]
-[ext_resource type="PackedScene" uid="uid://nesidvxwsmuc" path="res://enemies/baseEnemy/baseEnemy.tscn" id="3_hsydf"]
+[ext_resource type="AudioStream" uid="uid://cmqx88jhtilho" path="res://level/level1/lvl1music.mp3" id="3_1k4f4"]
+[ext_resource type="Script" path="res://level/level1/enemies.gd" id="4_wtibs"]
 
 [node name="Level1" type="Node2D"]
 
 [node name="Gameui" parent="." instance=ExtResource("1_r84ig")]
+position = Vector2(18, -8)
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("2_e5caq")]
-position = Vector2(270, 636)
+top_level = true
+position = Vector2(273, 635)
 
-[node name="BaseEnemy" parent="." instance=ExtResource("3_hsydf")]
-position = Vector2(80, 108)
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_1k4f4")
+autoplay = true
+parameters/looping = true
+
+[node name="Enemies" type="Node2D" parent="."]
+script = ExtResource("4_wtibs")
