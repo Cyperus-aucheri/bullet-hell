@@ -21,6 +21,7 @@ text = "Back to Main Menu
 
 [node name="Button" type="Button" parent="lbl2"]
 modulate = Color(1, 1, 1, 0)
+layout_mode = 0
 offset_left = -16.0
 offset_top = 4.0
 offset_right = 476.0
