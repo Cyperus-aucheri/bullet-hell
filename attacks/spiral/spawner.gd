@@ -6,6 +6,8 @@ var screenSize: Vector2
 var screen_left: int;
 var screen_width: int;
 
+var rng = RandomNumberGenerator.new()
+
 func SpawnBullet(pos: Vector2):
 	var scene = load("res://bullets/baseBullet.tscn")
 	var instance = scene.instantiate()
@@ -30,6 +32,8 @@ func SpawnBullet(pos: Vector2):
 # Called when the node enters the scene tree for the first time.
 func start(pos: Vector2) -> void:
 	screenSize = get_viewport_rect().size
+	
+	currentAngle += rng.randi_range(0, 360)
 	
 	for i in range(50):
 		SpawnBullet(pos)

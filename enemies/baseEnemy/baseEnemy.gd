@@ -66,4 +66,6 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 		area.get_parent().queue_free()  # Destroy bullet
 		
 		if Global.bossHealth <= 0:
+			get_tree().change_scene_to_file("res://gamewin.tscn")
 			get_parent().queue_free()
+			
